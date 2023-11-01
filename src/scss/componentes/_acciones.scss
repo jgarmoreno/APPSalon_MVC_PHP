@@ -1,16 +1,17 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.acciones {
+.acciones, .acciones-actualizar {
     @include m.tablet {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: calc(v.$separacion/2);
         margin-bottom: 5rem;
+        width: 97%;
     }
     a {
-        margin-top: 4rem;
+        margin-top: 2rem;
         color: v.$blanco;
         display: block;
         margin-bottom: 2rem;
@@ -19,4 +20,7 @@
     a:hover {
         color: darken(v.$blanco, 15%);     
     }
+}
+.acciones-actualizar {
+    margin-top: 0rem;
 }

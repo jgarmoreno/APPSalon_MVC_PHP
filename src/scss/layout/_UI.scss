@@ -19,14 +19,15 @@
     .app {
         width: 95%;
         margin: 0 auto;
-        padding: 3rem 0;
+        padding: 3rem 1rem;
         @include m.tablet {
             overflow: scroll;
+            margin-right: 4rem;
         }
     }
 
     .barra {
-        margin: 3rem 0 auto 0;
+        margin: 3rem 0 4rem 0;
         width: 95%;
 
         p {
@@ -34,7 +35,7 @@
             color: v.$blanco;
             font-weight: v.$bold;
             @include m.telefono {
-                margin-top: 3rem;
+                margin-top: 5rem;
             }
             @include m.desktop {
                 text-align: left;
@@ -53,12 +54,21 @@
 
         .boton {
             @include m.boton(darken(v.$azul, 30%), v.$blanco);
-            margin: 5rem 0;
+            width: 105%;
+            @include m.tablet {
+                width: 105%;
+            }
+            @include m.tablet {
+                width: auto;
+            }
         }
     }
 }
 .barra-servicios {
     margin-bottom: v.$separacion;
+    @include m.desktop {
+        margin-bottom: 0;
+    }
 
     @include m.tablet {
         display: flex;
@@ -81,9 +91,12 @@
         display: block;
         width: 100%;
         margin-bottom: 1rem;
+        @include m.desktop {
+            margin-bottom: 0;
+        }
         text-transform: uppercase;
         font-weight: v.$bold;
-        width:100%;
+
         font-size: 1.6rem;
 
         &:hover {

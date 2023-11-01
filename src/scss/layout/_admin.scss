@@ -1,10 +1,15 @@
 @use 'base/variables' as v;
 
+.titulo-admin {
+    margin-top: v.$separacion;
+}
+
 .citas {
     list-style: none;
     padding: 0;
     li {
-        padding: 1rem;
+        margin-top: 2rem;
+        padding-bottom: 2rem;
         border-top: 1px solid v.$blanco;
 
         p {
@@ -33,9 +38,12 @@
 }
 .servicios {
     @extend .citas;
-
+    li {
+        padding-bottom: 0;
+    }
     .acciones {
         margin: 0;
+        width: 100%;
     }
     .boton,
     .boton-eliminar {

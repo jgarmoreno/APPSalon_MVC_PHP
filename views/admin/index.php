@@ -12,7 +12,7 @@
     </div>
 <?php } ?>
 
-<h2>Buscador de citas</h2>
+<h2 class="titulo-admin">Buscador de citas</h2>
 
 <div class="busqueda">
     <form class="formulario">

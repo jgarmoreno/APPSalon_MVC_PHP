@@ -2,22 +2,32 @@
 @use 'base/mixins' as m;
 
 .formulario {
-    width: 100%;
-    margin-top: 5rem;
+    width: 97%;
+    margin: 5rem auto 0 auto;
 }
 .campo {
-    display: flex;
+    display: block;
+    @include m.tablet {
+        display: flex;
+    }
     margin-bottom: 2rem;
     align-items: center;
 
     label {
+        display: block;
         flex: 0 0 12rem;
+        margin-bottom: 1rem;
+        @include m.tablet {
+            text-align: unset;
+            margin-bottom: unset;
+        }
     }
     input {
         flex: 1;
         border: none;
         padding: calc(v.$separacion / 4);
         border-radius: 1rem;
+        width: 100%;
 
         &:disabled {
             background-color: lighten(v.$negro, 30%);
