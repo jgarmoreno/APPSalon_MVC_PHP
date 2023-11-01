@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+
+.citas {
+    list-style: none;
+    padding: 0;
+    li {
+        padding: 1rem;
+        border-top: 1px solid v.$blanco;
+
+        p {
+            font-weight: v.$bold;
+            color: v.$azul;
+        }
+        span {
+            font-weight: v.$bold;
+            color: v.$blanco;
+            padding: 0;
+        }
+        .servicio {
+            font-weight: v.$bold;
+            color: v.$blanco;
+            padding: 0;
+            span {
+                color: v.$azul;
+            }
+        }
+    }
+}
+.alertaFecha {
+    border-top: 1px solid v.$blanco;
+    padding-top: 7rem;
+
+}
+.servicios {
+    @extend .citas;
+
+    .acciones {
+        margin: 0;
+    }
+    .boton,
+    .boton-eliminar {
+        margin: 0;
+    }
+}

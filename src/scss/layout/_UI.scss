@@ -1,0 +1,99 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-app {
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        min-height: 100vh;
+    }
+    .imagen {
+        background-image: url(../img/1.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 20rem;
+        @include m.tablet {
+            height: auto;
+        }
+    }
+    .app {
+        width: 95%;
+        margin: 0 auto;
+        padding: 3rem 0;
+        @include m.tablet {
+            overflow: scroll;
+        }
+    }
+
+    .barra {
+        margin: 3rem 0 auto 0;
+        width: 95%;
+
+        p {
+            text-align: center;
+            color: v.$blanco;
+            font-weight: v.$bold;
+            @include m.telefono {
+                margin-top: 3rem;
+            }
+            @include m.desktop {
+                text-align: left;
+            }
+            span {
+                color: v.$azul;
+            }
+        }
+
+        @include m.desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: auto;
+        }
+
+        .boton {
+            @include m.boton(darken(v.$azul, 30%), v.$blanco);
+            margin: 5rem 0;
+        }
+    }
+}
+.barra-servicios {
+    margin-bottom: v.$separacion;
+
+    @include m.tablet {
+        display: flex;
+
+    }
+
+    // .boton {
+    //     margin: 0 0 1rem 0;
+    //     padding: 0 auto;
+    //     background-color: v.$amarillo;
+    //     &:hover{
+    //         background-color: lighten(v.$amarillo, 12%);
+    //     }
+    // }
+    a {
+        background-color: v.$azul;
+        border: none;
+        color: v.$blanco;
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: v.$bold;
+        width:100%;
+        font-size: 1.6rem;
+
+        &:hover {
+            background-color: darken(v.$azul, 10%);
+            cursor: pointer;
+        }
+        &.actual {
+            background-color: v.$blanco;
+            color: v.$azul;
+        }
+    }
+
+}
