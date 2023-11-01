@@ -16,7 +16,7 @@
     </div>
     <div class="campo">
         <label for="telefono">Télefono</label>
-        <input type="tel" id="telefono" placeholder="Tu télefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" name="telefono" value="<?php echo s($usuario -> telefono)?>">
+        <input type="tel" id="telefono" placeholder="Tu télefono" pattern="[0-9]{9}" name="telefono" value="<?php echo s($usuario -> telefono)?>">
     </div>
     <div class="campo">
         <label for="email">Email</label>
