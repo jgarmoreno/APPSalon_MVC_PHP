@@ -27,8 +27,8 @@ class Email {
         $mail->Password = $_ENV['EMAIL_PASS'];
 
         // Datos
-        $mail->setFrom('jorgarcmoreno@gmail.com', 'AppSalon.com');
-        $mail->addAddress('admin@appsalon.com');
+        $mail->setFrom('soporte@appsalon.com');
+        $mail->addAddress($this->email, $this->nombre);
         $mail->Subject = 'Confirma tu cuenta en AppSalon';
 
         // Set HTML
@@ -104,8 +104,8 @@ class Email {
         $mail->Password = $_ENV['EMAIL_PASS'];
 
         // Datos
-        $mail->setFrom('creacioncuenta@appsalon', 'AppSalon.com');
-        $mail->addAddress('admin@appsalon.com');
+        $mail->setFrom('soporte@appsalon');
+        $mail->addAddress($this->email, $this->nombre);
         $mail->Subject = 'Confirma tu cuenta en AppSalon';
 
         // Set HTML
